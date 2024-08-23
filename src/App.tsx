@@ -31,6 +31,7 @@ function App() {
     }
   };
   applyTwaColorScheme();
+  
   // const display_balance = balance ? (balance / 1000000000).toFixed(9) : "Loading..."
   return (
     <div>
@@ -64,6 +65,7 @@ function App() {
         <a
           onClick={() => {
             showAlert();
+            WebApp.sendData(JSON.stringify({ type: 'balance', value: balance });
           }}
         >
           Show Alert
