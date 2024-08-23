@@ -4,8 +4,9 @@ import { useMainContract } from "./hooks/useMainContract";
 import { useTonConnect } from "./hooks/useTonConnect";
 
 function App() {
-  const { counter_value, owner_address, contract_address, sendIncrement } = useMainContract();
+  const { counter_value, balance, owner_address, contract_address, sendIncrement } = useMainContract();
   const { connected } = useTonConnect()
+  const display_balance = balance ? (balance / 1000000000).toFixed(9) : "Loading..."
   return (
     <div>
       <div className="container">
@@ -23,6 +24,11 @@ function App() {
         <div className='Card'>
           <b>Owner Address</b>
           <div>{owner_address}</div>
+        </div>
+
+        <div className='Card'>
+          <b>Contract balance</b>
+          <div>{display_balance}</div>
         </div>
 
         <div className='Card'>
