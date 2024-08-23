@@ -5,6 +5,20 @@
   text-align: center;
 }
 
+:root {
+  --background-color-light: #ffffff;
+  --background-color-dark: #000000;
+}
+
+body {
+  background-color: var(--background-color-light); /* Default to light mode */
+}
+
+[data-theme="dark"] body {
+  background-color: var(--background-color-dark);
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;

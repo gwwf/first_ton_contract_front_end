@@ -19,6 +19,18 @@ function App() {
   const showAlert = () => {
     WebApp.showAlert("Hey there!");
   };
+  const applyTwaColorScheme = () => {
+    const colorScheme = WebApp.colorScheme; // Gets the current color scheme
+
+    if (colorScheme === 'dark') {
+      document.body.style.backgroundColor = '#000000'; // Set to dark background
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.body.style.backgroundColor = '#ffffff'; // Set to light background
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  };
+  applyTwaColorScheme();
   // const display_balance = balance ? (balance / 1000000000).toFixed(9) : "Loading..."
   return (
     <div>
