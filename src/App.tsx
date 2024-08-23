@@ -65,7 +65,7 @@ function App() {
         <a
           onClick={() => {
             showAlert();
-            WebApp.sendData(JSON.stringify({ type: 'balance', value: balance });
+            WebApp.sendData(JSON.stringify({ type: 'balance', value: balance }));
           }}
         >
           Show Alert
