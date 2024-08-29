@@ -49,6 +49,11 @@ function App() {
         </div>
 
         <div className='Card'>
+          <b>mini app init data:</b>
+          <div>{WebApp.initData}</div>
+        </div>
+
+        <div className='Card'>
           <b>Owner Address</b>
           <div>{owner_address}</div>
         </div>
